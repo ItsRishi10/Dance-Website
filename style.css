@@ -1,0 +1,514 @@
+.text {
+  vertical-align: middle;
+  height: 2.1rem; /* Match the text height */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent sticky header from overlapping anchor sections */
+html {
+  scroll-behavior: smooth; /* keeps smooth scrolling */
+  scroll-padding-top: 80px; /* adjust to your header height */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 100px;
+  background-color: #E5F3FD;
+}
+
+/* Header */
+.header {
+  background: lightgreen;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 👈 make sure it's always clickable */
+}
+
+.header img {
+  height: 100px;
+  width: 100px;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+}
+
+.header nav a {
+  color: #222;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #f77f00;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-header {
+  vertical-align: middle;
+  height: 8rem;
+  margin-bottom: -1.5rem;
+}
+
+.hero-text {
+  margin-top: 1.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.teacher img {
+  margin-top: 1rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.teacher-text {
+  margin-top: 1.5rem;
+}
+
+.teacher-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.box-text {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: lightgreen;
+}
+
+.box-text h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.box-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.box-text img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  margin-top: 1.5rem;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.gallery-grid img {
+  width: 30%;
+  min-width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Register */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: #FFFACD;
+  color: #222;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #01F9C6;
+}
+
+.services, .register{
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.services h2, .register h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact Us Page */
+.contact-us {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.contact-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: lightgreen;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #222;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  z-index: 1001; /* keep above menu */
+  margin: auto;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #222;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate into X when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -7px);
+}
+
+/* Default nav style */
+#nav-menu {
+  display: flex;
+}
+
+/* Enquiry Page Styles */
+.enquiry-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.enquiry-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.enquiry-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.enquiry-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.enquiry-form input[type="text"],
+.enquiry-form input[type="email"],
+.enquiry-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.enquiry-form button {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: #FFFACD;
+  color: #222;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.enquiry-form button:hover{
+  background: #01F9C6;
+}
+
+
+/* ===============================
+   Responsive Design (Mobile/Tablet)
+   =============================== */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header img{
+    height: 75px;
+    width: 75px;
+    padding-bottom: 10px;
+  }
+
+  .header nav {
+    margin-top: 0.5rem;
+  }
+
+  .header nav a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  /* Hero */
+  .hero-header {
+    vertical-align: middle;
+    height: 3rem;
+    width: 18rem;
+    margin-bottom: -1.5rem;
+    max-width: 100%;
+    object-fit: contain; /* keeps full image without distortion */
+  }
+
+  .hero-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-description p {
+    font-size: 1rem;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-text {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Contact Page */
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-grid img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  #nav-menu a {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #222;
+  }
+
+  #nav-menu.active {
+    display: flex; /* show when active */
+  }
+}
+
+/* Default nav: show on desktop */
+#nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: lightgreen;
+    position: absolute;
+    top: 100px; /* just below header */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .enquiry-section {
+    padding: 2rem 1rem;
+  }
+
+  .enquiry-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .enquiry-section p {
+    font-size: 1rem;
+  }
+
+  .enquiry-form {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .enquiry-form input[type="text"],
+  .enquiry-form input[type="email"],
+  .enquiry-form textarea,
+  .enquiry-form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .enquiry-form button {
+    padding: 0.75rem;
+  }
+}

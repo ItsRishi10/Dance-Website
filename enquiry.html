@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Your Studio Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.png" alt="Logo">
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="enquiry-section">
+    <h2>Have Questions? Ask Here!</h2>
+    <p>
+        Please take a few minutes to share your preferences and details for the upcoming choreography. <br>
+        Your input will help ensure the piece fits the dancers, the space, and the overall vision of the performance. <br>
+        Fill out the form below. We’ll get back to you soon.
+    </p>
+    <form id="enquiry-form" class="enquiry-form" onsubmit="sendMail(event)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="from_name" placeholder="Your Full Name" required>
+
+      <label for="Contact">Contact</label>
+      <input type="text" id="Contact" name="contact_number" placeholder="Your Contact No." required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="from_email" placeholder="Your Email Address" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message Here..." required></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Dance Studio. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("year").textContent = year;
+        });
+
+    </script>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    const burger = document.querySelector(".hamburger");
+    if (nav && burger) {
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  }
+
+  // Close menu when clicking a nav link (mobile)
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("nav-menu");
+      const burger = document.querySelector(".hamburger");
+      if (nav && burger && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        burger.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+    <!-- Load EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize EmailJS
+    emailjs.init("RSGoNfNqXHPYPfgLT"); // your Public Key
+
+    // Form submission
+    window.sendMail = function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_t9k4tij", "template_j1b9hrn", "#enquiry-form")
+        .then(function(response) {
+           alert("✅ Enquiry sent successfully!");
+        }, function(error) {
+           alert("❌ Failed to send enquiry: " + error.text);
+        });
+    }
+  });
+</script>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

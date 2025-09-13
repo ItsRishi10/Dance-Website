@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Ritu Nritya Kendra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.png" alt="Logo">
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact-us.html" class="active">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Contact Us Section -->
+  <section class="contact-us">
+    <h2>Contact Our Team</h2>
+    <p>We’d love to hear from you! Reach out to any of our team members directly.</p>
+    
+    <div class="contacts">
+      <!-- Person 1 -->
+      <div class="contact-card">
+        <h3>Rithika Menon</h3>
+        <p>Founder</p>
+        <p><strong>Email:</strong> rithika.menon005@gmail.com</p>
+        <p><strong>Phone:</strong> +91 63643 04867</p>
+      </div>
+
+      <!-- Person 2 -->
+      <div class="contact-card">
+        <h3>Rishab Menon</h3>
+        <p>Technical Support</p>
+        <p><strong>Email:</strong> mrish234@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Dance Studio. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("year").textContent = year;
+        });
+
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    const burger = document.querySelector(".hamburger");
+    if (nav && burger) {
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  }
+
+  // Close menu when clicking a nav link (mobile)
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("nav-menu");
+      const burger = document.querySelector(".hamburger");
+      if (nav && burger && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        burger.classList.remove("active");
+      }
+    });
+  });
+</script>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
