@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritu Nritya Kendra</title>
+  <link rel="stylesheet" href="style-v2.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.png" alt="Logo">
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/Text.png" alt="Ritu Nritya Kendra Text" class="hero-header">
+    <div class="hero-text">
+      <h2>Nurturing the Art of Dance</h2>
+      <p>
+        <img src="images/Text.png" alt="Ritu Nritya Kendra Text" class="text">
+        is a vibrant dance center dedicated to preserving and promoting the rich heritage of Bharatanatyam while embracing the diversity of dance styles. <br>
+        "Ritu" symbolizes the ever-changing seasons of life, reflecting our commitment to growth, evolution, and celebration through dance.
+        "Nritya" represents the art of dance, while "Kendra" signifies a center of learning and creativity.
+        Our center is a nurturing environment where students can grow, learn, and flourish in the world of dance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Teacher Section -->
+  <section class="teacher">
+    <div class="teacher-text">
+      <h2>About Guru</h2>
+      <img src="images/Image.png" alt="Dance Teacher">
+      <p>
+        Vid. Rithika Menon, a talented Bharatanatyam artiste and accomplished psychologist.
+        With a strong foundation in both Art and Science, she has completed her graduation with a specialization in Performing Arts and Psychology, followed by a Master's degree in Clinical Psychology.
+        Currently pursuing her PhD in Psychology, she brings a unique blend of artistic expression and scientific insight to her performances.
+        Starting her Bharatanatyam journey at the tender age of 6 under the guidance of Guru Vid. Mamatha Karanth, she has achieved the esteemed Vidwat-Final certification under the guidance of Guru Vid. Hemalatha Prakash.
+        She has graced numerous stages with her captivating performances across the Nation.
+        Apart from Bharatanatyam, she is also a self-taught Bollywood dancer, showcasing her versatility and passion for dance.
+      </p>
+    </div>
+  </section>
+
+  <div class="box">
+    <div class="box-text">
+      <h3>Mission</h3>
+      <p>
+        Our mission is to provide high-quality dance education, foster creativity, and promote cultural awareness through the art of dance. <br>
+        We strive to create a supportive community that encourages students to reach their full potential and develop a lifelong passion for dance.
+      </p>
+    </div>
+
+  
+    <div class="box-text">
+      <h3>Vision</h3>
+      <p>
+        Our vision is to become a leading dance center that celebrates the diversity of dance styles, promotes cultural exchange, and nurtures the next generation of dancers, choreographers, and dance educators.
+        We envision a future where dance is recognized as a powerful medium for self-expression, cultural preservation, and community building.
+      </p>
+    </div>
+
+    <div class="box-text">
+      <h3>Values</h3>
+      <p>At Ritu Nritya Kendra, we value:</p>
+      <p>
+        - Creativity and Innovation: We encourage students to explore their creativity and develop their unique style. <br>
+        - Cultural Heritage: We preserve and promote the rich cultural heritage of Bharatanatyam and other traditional dance forms. <br>
+        - Diversity and Inclusivity: We welcome students from diverse backgrounds and promote inclusivity in our dance community. <br>
+        - Excellence and Discipline: We strive for excellence in dance education and promote discipline, hard work, and dedication.
+      </p>
+    </div>
+  </div>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>Join Our Community</h2>
+      <p>
+        We welcome passionate dancers and enthusiasts to join our community! As we continue to grow and evolve, <br>
+        we will be introducing new opportunities for dancers to showcase their talents, collaborate with peers, and learn from industry experts. <br>
+        Stay tuned for exciting updates and initiatives!
+      </p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>Why Choose Us?</h2>
+      <p>
+        - Experienced and skilled choreographers. <br>
+        - Personalized attention to detail. <br>
+        - Flexibility to accommodate your needs and preferences. <br>
+        - Passion for creating unforgettable performances.
+      </p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>Let's Dance Together!</h2>
+      <p>
+        Contact us to learn more about our dance classes, Wedding choreography, and School Annual Function choreography services. <br>
+        We'd be delighted to help you create an unforgettable experience!
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.png" alt="Dance 1">
+      <img src="images/gallery2.png" alt="Dance 2">
+    </div>
+  </section> 
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Ritu Nritya Kendra. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("year").textContent = year;
+        });
+
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    const burger = document.querySelector(".hamburger");
+    if (nav && burger) {
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  }
+
+  // Close menu when clicking a nav link (mobile)
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("nav-menu");
+      const burger = document.querySelector(".hamburger");
+      if (nav && burger && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        burger.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

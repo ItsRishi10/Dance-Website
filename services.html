@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Ritu Nritya Kendra</title>
+  <link rel="stylesheet" href="style-v2.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.png" alt="Logo">
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Our Services</a>
+      <a href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Our Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p></p>
+    
+    <div class="box">
+      <div class="box-text">
+       <!-- <img src="" alt=""> -->
+        <h3>Bharatanatyam Classes</h3>
+        <p>
+          Learn the classical dance form of Bharatanatyam from our experienced instructors.
+        </p>
+      </div>
+
+      <div class="box-text">
+       <!-- <img src="" alt=""> -->
+        <h3>Wedding Choreography</h3>
+        <p>
+          Our choreographers will craft a custom dance routine that reflects your personal style and wedding vision, making your special day truly unforgettable.
+        </p>
+      </div>
+
+      <div class="box-text">
+       <!-- <img src="" alt=""> -->
+        <h3>Annual Function Choreography</h3>
+        <p>
+          We provide engaging and energetic choreography for school annual functions, helping students showcase their talents and create lifelong memories.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>What We Offer</h2>
+      <p>
+        - Customized choreography for weddings and school events. <br>
+        - Expert guidance and training for students and performers. <br>
+        - Rehearsals and performance coaching.
+      </p>
+    </div>
+  </section>
+
+  <section class="register">
+    <h2>Register Now</h2>
+    
+    <div class="box">
+      <!-- Person 1 -->
+      <div class="box-text">
+       <!-- <img src="" alt=""> -->
+        <h3>Bharatanatyam Classes</h3>
+        <a href="https://forms.gle/Afi32sYBeLhYWtMMA" target="_blank" class="btn">Register Now</a>
+      </div>
+
+      <!-- Person 2 -->
+      <div class="box-text">
+       <!-- <img src="" alt=""> -->
+        <h3>Enquiry for other services</h3>
+        <a href="enquiry.html" class="btn">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Ritu Nritya Kendra. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("year").textContent = year;
+        });
+
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    const burger = document.querySelector(".hamburger");
+    if (nav && burger) {
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  }
+
+  // Close menu when clicking a nav link (mobile)
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("nav-menu");
+      const burger = document.querySelector(".hamburger");
+      if (nav && burger && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        burger.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
